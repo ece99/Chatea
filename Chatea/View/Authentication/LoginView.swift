@@ -1,0 +1,71 @@
+//
+//  LoginView.swift
+//  Chatea
+//
+//  Created by Ece Ayvaz on 20.10.2021.
+//
+
+import SwiftUI
+
+struct LoginView: View {
+    @State private var email = ""
+    @State private var password = ""
+
+    var body: some View {
+        
+        NavigationView {
+            VStack {
+                VStack {
+                    HStack { Spacer() }
+                    
+                    Text("Chatea")
+                        .font(.largeTitle)
+                        .bold()
+                    
+                    VStack(spacing: 20) {
+                        TextField("Email",text: $email)
+                        Divider()
+                            .background(Color(.darkGray))
+   
+                        SecureField("Password",text: $password)
+                        Divider()
+                            .background(Color(.darkGray))
+                    }
+                    .padding([.top, .horizontal], 32)
+                    
+                    Button(action: {
+                        print("Handle sign up!")
+                    }, label: {
+                        Text("Sign In")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(width: 340, height: 50)
+                            .background(Color.blue)
+                            .clipShape(Capsule())
+                            .padding()
+                    })
+                    
+                    Spacer()
+                    HStack {
+                        Text("Don't have an account?")
+                            .font(.system(size: 14))
+                            .foregroundColor(.blue)
+                        
+                        Text("Sign Up")
+                            .font(.system(size: 14, weight: .semibold))
+                            .foregroundColor(.blue)
+                    }
+                }
+                .padding(.leading)
+            }
+            .padding(.top, -56)
+        }
+
+    }
+}
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
+}

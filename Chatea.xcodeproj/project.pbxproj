@@ -11,6 +11,7 @@
 		37DC524F2720367D00423303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC524E2720367D00423303 /* ContentView.swift */; };
 		37DC52512720367F00423303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DC52502720367F00423303 /* Assets.xcassets */; };
 		37DC52542720367F00423303 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DC52532720367F00423303 /* Preview Assets.xcassets */; };
+		37DC5260272055D800423303 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC525F272055D800423303 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		37DC52502720367F00423303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37DC52532720367F00423303 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37DC52552720367F00423303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37DC525F272055D800423303 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		37DC524B2720367D00423303 /* Chatea */ = {
 			isa = PBXGroup;
 			children = (
+				37DC525C2720544500423303 /* View */,
 				37DC524C2720367D00423303 /* ChateaApp.swift */,
 				37DC524E2720367D00423303 /* ContentView.swift */,
 				37DC52502720367F00423303 /* Assets.xcassets */,
@@ -67,6 +70,22 @@
 				37DC52532720367F00423303 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37DC525C2720544500423303 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37DC525E2720554D00423303 /* Authentication */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37DC525E2720554D00423303 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				37DC525F272055D800423303 /* LoginView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DC5260272055D800423303 /* LoginView.swift in Sources */,
 				37DC524F2720367D00423303 /* ContentView.swift in Sources */,
 				37DC524D2720367D00423303 /* ChateaApp.swift in Sources */,
 			);
