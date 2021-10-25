@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3761F6FF272170EB00DD04BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761F6FE272170EB00DD04BB /* MainView.swift */; };
+		378F607E27274BA6001A3D0C /* ConservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F607D27274BA6001A3D0C /* ConservationView.swift */; };
+		378F608227274BB2001A3D0C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F608127274BB2001A3D0C /* ChatView.swift */; };
+		378F60852727599A001A3D0C /* ConservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F60842727599A001A3D0C /* ConservationCell.swift */; };
+		378F608827275F48001A3D0C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F608727275F48001A3D0C /* UserCell.swift */; };
 		37DC524D2720367D00423303 /* ChateaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC524C2720367D00423303 /* ChateaApp.swift */; };
 		37DC524F2720367D00423303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC524E2720367D00423303 /* ContentView.swift */; };
 		37DC52512720367F00423303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DC52502720367F00423303 /* Assets.xcassets */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3761F6FE272170EB00DD04BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		378F607D27274BA6001A3D0C /* ConservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationView.swift; sourceTree = "<group>"; };
+		378F608127274BB2001A3D0C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		378F60842727599A001A3D0C /* ConservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationCell.swift; sourceTree = "<group>"; };
+		378F608727275F48001A3D0C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		37DC52492720367D00423303 /* Chatea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DC524C2720367D00423303 /* ChateaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateaApp.swift; sourceTree = "<group>"; };
 		37DC524E2720367D00423303 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3761F6FC272169D000DD04BB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3761F6FE272170EB00DD04BB /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		378F607B27274B85001A3D0C /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				378F608127274BB2001A3D0C /* ChatView.swift */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		378F607C27274B91001A3D0C /* Conservation */ = {
+			isa = PBXGroup;
+			children = (
+				378F607D27274BA6001A3D0C /* ConservationView.swift */,
+				378F60842727599A001A3D0C /* ConservationCell.swift */,
+				378F608727275F48001A3D0C /* UserCell.swift */,
+			);
+			path = Conservation;
+			sourceTree = "<group>";
+		};
 		37DC52402720367D00423303 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +111,9 @@
 		37DC525C2720544500423303 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				378F607C27274B91001A3D0C /* Conservation */,
+				378F607B27274B85001A3D0C /* Chats */,
+				3761F6FC272169D000DD04BB /* Main */,
 				37DC525E2720554D00423303 /* Authentication */,
 			);
 			path = View;
@@ -157,8 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378F608827275F48001A3D0C /* UserCell.swift in Sources */,
 				37DC5260272055D800423303 /* LoginView.swift in Sources */,
+				3761F6FF272170EB00DD04BB /* MainView.swift in Sources */,
 				37DC524F2720367D00423303 /* ContentView.swift in Sources */,
+				378F607E27274BA6001A3D0C /* ConservationView.swift in Sources */,
+				378F60852727599A001A3D0C /* ConservationCell.swift in Sources */,
+				378F608227274BB2001A3D0C /* ChatView.swift in Sources */,
 				37DC524D2720367D00423303 /* ChateaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
