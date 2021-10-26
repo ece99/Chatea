@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+
     var body: some View {
         NavigationView{
             TabView{
@@ -17,7 +18,7 @@ struct MainView: View {
             .navigationTitle("Chats")
             .navigationBarItems(trailing:
                             Button(action: {
-                                print("Log out button pressed...")
+                                AuthViewModel.shared.logout()
                             }) {
                                 Text("Log Out")
                             }

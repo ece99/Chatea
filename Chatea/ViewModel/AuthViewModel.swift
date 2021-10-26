@@ -8,6 +8,17 @@
 import Firebase
 
 class  AuthViewModel: NSObject,ObservableObject {
+    
+    @Published var didAuthenticationUser = false
+    @Published var userSession : FirebaseAuth.User?
+
+    static let shared = AuthViewModel()
+    private var tempCurrentUser: FirebaseAuth.User?
+    
+    override init() {
+        userSession = Auth.auth().currentUser
+    }
+    
     func login()  {
         print("Login is trying")
     }
@@ -19,9 +30,12 @@ class  AuthViewModel: NSObject,ObservableObject {
                 return
             }
             guard let user = result?.user else{return}
+            self.tempCurrentUser = user
+            
             let  data: [String:Any] = ["email": email, "password":password]
+            
             Firestore.firestore().collection("users").document(user.uid).setData(data){ _ in
-                print("Succesfully added")
+                self.didAuthenticationUser = true
                 
             }
             
@@ -31,10 +45,12 @@ class  AuthViewModel: NSObject,ObservableObject {
     }
     
     func uploadImage()  {
-        
+     
     }
     
     func logout()  {
+        self.userSession = nil
+        try? Auth.auth().signOut()
         
     }
     
