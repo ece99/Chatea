@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @ObservedObject var viewModel = AuthViewModel()
 
     var body: some View {
         
@@ -34,7 +35,7 @@ struct LoginView: View {
                     .padding([.top, .horizontal], 32)
                     
                     Button(action: {
-                        print("Handle sign up!")
+                        viewModel.login()
                     }, label: {
                         Text("Sign In")
                             .font(.headline)
@@ -47,13 +48,18 @@ struct LoginView: View {
                     
                     Spacer()
                     HStack {
-                        Text("Don't have an account?")
-                            .font(.system(size: 14))
-                            .foregroundColor(.blue)
+                        Button(action: {
+                            viewModel.register(withEmail: email, password: password)
+                        }, label: {
+                            Text("Don't have an account?")
+                                .font(.system(size: 14))
+                                .foregroundColor(.blue)
+                            
+                            Text("Sign Up")
+                                .font(.system(size: 14, weight: .semibold))
+                                .foregroundColor(.blue)
+                        })
                         
-                        Text("Sign Up")
-                            .font(.system(size: 14, weight: .semibold))
-                            .foregroundColor(.blue)
                     }
                 }
                 .padding(.leading)
