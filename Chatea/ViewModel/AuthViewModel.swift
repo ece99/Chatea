@@ -17,9 +17,15 @@ class  AuthViewModel: NSObject,ObservableObject {
             if let error = error{
                 print("Failed to register \(error.localizedDescription)")
                 return
-            }else{
+            }
+            guard let user = result?.user else{return}
+            let  data: [String:Any] = ["email": email, "password":password]
+            Firestore.firestore().collection("users").document(user.uid).setData(data){ _ in
+                print("Succesfully added")
                 
             }
+            
+            
         }
   
     }
