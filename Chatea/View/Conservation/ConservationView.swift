@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ConservationView: View {
+    @State private  var showChatView = false
     var body: some View {
-        ZStack(alignment: .bottomTrailing){
+            ZStack(alignment: .bottomTrailing){
+            
+            NavigationLink(
+                destination: ChatView(),
+                isActive: $showChatView,
+                label: {
+                })
 
             ScrollView{
                 //user cell
-                HStack{
-                    ForEach((0 ... 3), id:\.self){ _ in
-                        UserCell()
-
-                    }
-                }
+                NewMessageView(showChatView: $showChatView)
                 //chats
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
@@ -31,9 +33,10 @@ struct ConservationView: View {
             }
 
         }
+    }
             
     }
-}
+
 
 struct ConservationView_Previews: PreviewProvider {
     static var previews: some View {
