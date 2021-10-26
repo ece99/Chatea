@@ -36,7 +36,7 @@ struct LoginView: View {
                     .padding([.top, .horizontal], 32)
                     
                     Button(action: {
-                        viewModel.login()
+                        viewModel.login(withEmail: email, password: password)
                     }, label: {
                         Text("Sign In")
                             .font(.headline)
