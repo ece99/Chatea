@@ -25,9 +25,11 @@ struct ConservationView: View {
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
                     ForEach((0 ... 10), id:\.self){ _ in
-                        ConservationCell()
-                            .padding(.horizontal)
- 
+                        NavigationLink(
+                            destination: ChatView(),
+                            label: {
+                                ConservationCell()
+                            })
                     }
                 }
             }

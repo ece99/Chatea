@@ -24,7 +24,7 @@ struct ConservationCell: View {
                     
                     Text("Some text messages")
                         .font(.system(size:15))
-                }
+                }.foregroundColor(.black)
                 Spacer()
             }
             .padding(.horizontal)

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3761F6FF272170EB00DD04BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761F6FE272170EB00DD04BB /* MainView.swift */; };
+		3764A90827278ED20068A3E0 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A90727278ED20068A3E0 /* ChatBubble.swift */; };
+		3764A90B27278FBA0068A3E0 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A90A27278FBA0068A3E0 /* MessageView.swift */; };
+		3764A911272797520068A3E0 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A910272797520068A3E0 /* CustomInputView.swift */; };
+		3764A91C27279B470068A3E0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A91B27279B470068A3E0 /* Message.swift */; };
+		3764A91F27279D090068A3E0 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A91E27279D090068A3E0 /* ChatViewModel.swift */; };
 		378F607E27274BA6001A3D0C /* ConservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F607D27274BA6001A3D0C /* ConservationView.swift */; };
 		378F608227274BB2001A3D0C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F608127274BB2001A3D0C /* ChatView.swift */; };
 		378F60852727599A001A3D0C /* ConservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F60842727599A001A3D0C /* ConservationCell.swift */; };
@@ -22,6 +27,11 @@
 
 /* Begin PBXFileReference section */
 		3761F6FE272170EB00DD04BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3764A90727278ED20068A3E0 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		3764A90A27278FBA0068A3E0 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		3764A910272797520068A3E0 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
+		3764A91B27279B470068A3E0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3764A91E27279D090068A3E0 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		378F607D27274BA6001A3D0C /* ConservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationView.swift; sourceTree = "<group>"; };
 		378F608127274BB2001A3D0C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		378F60842727599A001A3D0C /* ConservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationCell.swift; sourceTree = "<group>"; };
@@ -55,10 +65,29 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		3764A91427279B110068A3E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3764A91B27279B470068A3E0 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3764A91527279B190068A3E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3764A91E27279D090068A3E0 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		378F607B27274B85001A3D0C /* Chats */ = {
 			isa = PBXGroup;
 			children = (
 				378F608127274BB2001A3D0C /* ChatView.swift */,
+				3764A90727278ED20068A3E0 /* ChatBubble.swift */,
+				3764A90A27278FBA0068A3E0 /* MessageView.swift */,
+				3764A910272797520068A3E0 /* CustomInputView.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -93,6 +122,8 @@
 		37DC524B2720367D00423303 /* Chatea */ = {
 			isa = PBXGroup;
 			children = (
+				3764A91527279B190068A3E0 /* ViewModel */,
+				3764A91427279B110068A3E0 /* Model */,
 				37DC525C2720544500423303 /* View */,
 				37DC524C2720367D00423303 /* ChateaApp.swift */,
 				37DC524E2720367D00423303 /* ContentView.swift */,
@@ -200,11 +231,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				378F608B27276AF4001A3D0C /* NewMessageView.swift in Sources */,
+				3764A90827278ED20068A3E0 /* ChatBubble.swift in Sources */,
 				378F608827275F48001A3D0C /* UserCell.swift in Sources */,
 				37DC5260272055D800423303 /* LoginView.swift in Sources */,
+				3764A911272797520068A3E0 /* CustomInputView.swift in Sources */,
 				3761F6FF272170EB00DD04BB /* MainView.swift in Sources */,
 				37DC524F2720367D00423303 /* ContentView.swift in Sources */,
+				3764A90B27278FBA0068A3E0 /* MessageView.swift in Sources */,
+				3764A91F27279D090068A3E0 /* ChatViewModel.swift in Sources */,
 				378F607E27274BA6001A3D0C /* ConservationView.swift in Sources */,
+				3764A91C27279B470068A3E0 /* Message.swift in Sources */,
 				378F60852727599A001A3D0C /* ConservationCell.swift in Sources */,
 				378F608227274BB2001A3D0C /* ChatView.swift in Sources */,
 				37DC524D2720367D00423303 /* ChateaApp.swift in Sources */,
