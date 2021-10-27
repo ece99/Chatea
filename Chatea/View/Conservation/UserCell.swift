@@ -6,26 +6,24 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct UserCell: View {
+    let user: User
     var body: some View {
         
         VStack{
-            Image("foto")
+           //Image("foto")
+            KFImage(URL(string: user.profileImageUrl))
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width:55)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             
-            Text("Ece Ayvaz")
+            Text(user.email)
                 .font(.system(size: 12))
 
         }
     }
 }
 
-struct UserCell_Previews: PreviewProvider {
-    static var previews: some View {
-        UserCell()
-    }
-}
