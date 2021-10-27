@@ -30,6 +30,7 @@ class  AuthViewModel: NSObject,ObservableObject {
                 return
             }
             self.userSession = result?.user
+            self.fetchUser()
 
         }
         
@@ -70,9 +71,10 @@ class  AuthViewModel: NSObject,ObservableObject {
         guard let uid = userSession?.uid else { return}
         
         Firestore.firestore().collection("users").document(uid).getDocument{snapshot, _ in
-            guard let data = snapshot?.data() else { return}
-            
-            print(data)
+            //guard let data = snapshot?.data() else { return}
+            guard let user = try? snapshot?.data(as:User.self) else { return}
+       
+            print("DEBUG User object is \(user)")
         }
     }
     
