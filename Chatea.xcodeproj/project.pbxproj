@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37100E65272FC9EC00CE5EE8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37100E64272FC9EC00CE5EE8 /* MessageViewModel.swift */; };
 		3741E96C2727E9990023B84C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3741E96B2727E9990023B84C /* GoogleService-Info.plist */; };
 		3741E9792727F2DC0023B84C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E9782727F2DC0023B84C /* AuthViewModel.swift */; };
 		3761F6FF272170EB00DD04BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761F6FE272170EB00DD04BB /* MainView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37100E64272FC9EC00CE5EE8 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		3741E96B2727E9990023B84C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3741E9782727F2DC0023B84C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		3761F6FE272170EB00DD04BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				3764A91E27279D090068A3E0 /* ChatViewModel.swift */,
 				3741E9782727F2DC0023B84C /* AuthViewModel.swift */,
 				3784291B27290A42009BA465 /* NewMessageViewModel.swift */,
+				37100E64272FC9EC00CE5EE8 /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				3741E9792727F2DC0023B84C /* AuthViewModel.swift in Sources */,
 				3761F6FF272170EB00DD04BB /* MainView.swift in Sources */,
 				37DC524F2720367D00423303 /* ContentView.swift in Sources */,
+				37100E65272FC9EC00CE5EE8 /* MessageViewModel.swift in Sources */,
 				3764A90B27278FBA0068A3E0 /* MessageView.swift in Sources */,
 				3764A91F27279D090068A3E0 /* ChatViewModel.swift in Sources */,
 				378F607E27274BA6001A3D0C /* ConservationView.swift in Sources */,

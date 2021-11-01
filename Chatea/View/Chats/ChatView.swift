@@ -25,6 +25,7 @@ struct ChatView: View {
                 VStack(alignment: .leading, spacing: 12){
                     ForEach(viewModel.messages){ message in
                         //MessageView(isFromCurrentUser: message.isFromCurrentUser, messageText: message.messageText)
+                        MessageView(viewModel: MessageViewModel(message: message))
                     }
                 }
             }

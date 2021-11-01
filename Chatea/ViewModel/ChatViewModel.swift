@@ -15,8 +15,21 @@ class ChatViewModel: ObservableObject{
     init(user : User) {
        // messages = mockMessages
         self.user = user
+        fetchMessages()
     }
     
+    func fetchMessages(){
+     
+        guard let currentUid = AuthViewModel.shared.userSession?.uid else { return}
+        guard let chatPartnerId = user.id else {return}
+        
+        Firestore.firestore().collection("messages").document(currentUid).collection(chatPartnerId).getDocuments { snapshot , error in
+            
+            guard let documents = snapshot?.documents else { return}
+            self.messages = documents.compactMap {try? $0.data(as:Message.self)}
+            
+        }
+    }
    /* var mockMessages: [Message]{
         [
             .init(isFromCurrentUser: true, messageText:"Hey"),
