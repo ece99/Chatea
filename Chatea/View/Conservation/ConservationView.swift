@@ -9,24 +9,27 @@ import SwiftUI
 
 struct ConservationView: View {
     @State private  var showChatView = false
+    @State var selectedUser: User?
     var body: some View {
-            ZStack(alignment: .bottomTrailing){
-            
-            NavigationLink(
-                destination: ChatView(),
-                isActive: $showChatView,
-                label: {
-                })
+            VStack(alignment: .leading){
+                if let user = selectedUser {
+                    NavigationLink(
+                        destination: ChatView(user: user),
+                        isActive: $showChatView,
+                        label: {
+                        })
+                }
+
+                NewMessageView(showChatView: $showChatView, user: $selectedUser)
 
             ScrollView{
                 //user cell
-                NewMessageView(showChatView: $showChatView)
                 //chats
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
-                    ForEach((0 ... 10), id:\.self){ _ in
+                    ForEach((0 ... 20), id:\.self){ _ in
                         NavigationLink(
-                            destination: ChatView(),
+                            destination: ChatView(user: MOCK_USER),
                             label: {
                                 ConservationCell()
                             })

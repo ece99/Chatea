@@ -21,10 +21,12 @@ class NewMessageViewModel: ObservableObject {
             
             guard let documents = snapshot?.documents else { return}
                     
-            documents.forEach{ document in
+           /* documents.forEach{ document in
                 guard let user = try? document.data(as: User.self) else {return}
                 self.users.append(user)
-            }
+            }*/
+            // Auth.auth().currentUser?.uid
+            self.users = documents.compactMap({try? $0.data(as: User.self)}).filter({$0.id != AuthViewModel.shared.userSession?.uid})
             print("DEBUG \(self.users)")
 
         }

@@ -16,3 +16,5 @@ struct User : Identifiable, Decodable{
     
     
 }
+
+let MOCK_USER = User(id:"1234567890",email: "ege@gmail.com", password: "123456789",profileImageUrl: "www.pinterest.com")

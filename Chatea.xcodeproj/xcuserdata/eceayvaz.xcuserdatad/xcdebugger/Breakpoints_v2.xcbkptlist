@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3A4488DA-46F9-48C0-86FD-CD0F8B7A7C04"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F5CDBAD-E4CA-4874-900C-DEFAA7E07FCA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chatea/View/Conservation/NewMessageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1F5CDBAD-E4CA-4874-900C-DEFAA7E07FCA - 29c27b7338265742"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Chatea.User) -&gt; SwiftUI.Button&lt;Chatea.UserCell&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Chatea.User&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.Button&lt;Chatea.UserCell&gt;&gt; in Chatea.NewMessageView.body.getter : some"
+                  moduleName = "Chatea"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eceayvaz/Desktop/Chatea/Chatea/View/Conservation/NewMessageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "445">
+               </Location>
+               <Location
+                  uuid = "1F5CDBAD-E4CA-4874-900C-DEFAA7E07FCA - 8b66c9c577114b9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Chatea.User) -&gt; SwiftUI.Button&lt;Chatea.UserCell&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Chatea.User&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.Button&lt;Chatea.UserCell&gt;&gt; in Chatea.NewMessageView.body.getter : some"
+                  moduleName = "Chatea"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eceayvaz/Desktop/Chatea/Chatea/View/Conservation/NewMessageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0541589-312B-40A6-83F2-8C488D98DBC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chatea/View/Conservation/NewMessageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "B0541589-312B-40A6-83F2-8C488D98DBC0 - e3ac2b8541c2b01f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Chatea.User&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.Button&lt;Chatea.UserCell&gt;&gt; in Chatea.NewMessageView.body.getter : some"
+                  moduleName = "Chatea"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eceayvaz/Desktop/Chatea/Chatea/View/Conservation/NewMessageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "B0541589-312B-40A6-83F2-8C488D98DBC0 - 29c27b7338265742"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Chatea.User) -&gt; SwiftUI.Button&lt;Chatea.UserCell&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Chatea.User&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.Button&lt;Chatea.UserCell&gt;&gt; in Chatea.NewMessageView.body.getter : some"
+                  moduleName = "Chatea"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eceayvaz/Desktop/Chatea/Chatea/View/Conservation/NewMessageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "445">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

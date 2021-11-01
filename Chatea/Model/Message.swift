@@ -5,11 +5,19 @@
 //  Created by Ece Ayvaz on 26.10.2021.
 //
 
-import Foundation
+import Firebase
+import FirebaseFirestoreSwift
 
-struct Message: Identifiable{
+struct Message: Identifiable, Decodable{
     
-    let id = NSUUID().uuidString
-    let isFromCurrentUser: Bool
-    let messageText: String
+    @DocumentID var id: String?
+    let fromId: String
+    let toId: String
+    let read: String
+    let text: String
+    
+    /* let id = NSUUID().uuidString
+     let isFromCurrentUser: Bool
+     let messageText: String*/
+    
 }

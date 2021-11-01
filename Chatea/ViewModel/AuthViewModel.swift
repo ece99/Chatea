@@ -7,7 +7,7 @@
 
 import Firebase
 
-class  AuthViewModel: NSObject,ObservableObject {
+class  AuthViewModel: ObservableObject {
     
     @Published var didAuthenticationUser = false
     @Published var userSession : FirebaseAuth.User?
@@ -15,9 +15,7 @@ class  AuthViewModel: NSObject,ObservableObject {
     static let shared = AuthViewModel()
     private var tempCurrentUser: FirebaseAuth.User?
     
-    override init() {
-        super.init()
-        
+    init() {
         userSession = Auth.auth().currentUser
         
         fetchUser()

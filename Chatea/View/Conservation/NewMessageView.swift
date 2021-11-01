@@ -10,12 +10,15 @@ import SwiftUI
 struct NewMessageView: View {
     @Binding var showChatView:Bool
     @ObservedObject var viewModel = NewMessageViewModel()
+    @Binding var user: User?
     var body: some View {
         
             HStack{
                 ForEach(viewModel.users){ user in
                 //ForEach((0 ... 5), id:\.self){ _ in
-                    Button(action:{showChatView.toggle()
+                    Button(action:{
+                        showChatView.toggle()
+                        self.user = user
                     }, label: {
                         UserCell(user: user)
                     })
@@ -27,8 +30,4 @@ struct NewMessageView: View {
     }
 
 
-struct NewMessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewMessageView(showChatView: .constant(true))
-    }
-}
+
