@@ -28,11 +28,15 @@ struct ConservationView: View {
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
                     ForEach((0 ... 20), id:\.self){ _ in
-                        NavigationLink(
-                            destination: ChatView(user: MOCK_USER),
-                            label: {
-                                ConservationCell()
-                            })
+                        if let user = selectedUser {
+                            NavigationLink(
+                                destination: ChatView(user: user),
+                                label: {
+                                    ConservationCell()
+                                })
+                            
+                        }
+                       
                     }
                 }
             }

@@ -12,9 +12,10 @@ struct Message: Identifiable, Decodable{
     
     @DocumentID var id: String?
     let fromId: String
-    let toId: String
-    let read: String
+    let told: String
+    let read: Bool
     let text: String
+    let timestamp : Timestamp
     
     /* let id = NSUUID().uuidString
      let isFromCurrentUser: Bool
