@@ -10,6 +10,8 @@ import SwiftUI
 struct ConservationView: View {
     @State private  var showChatView = false
     @State var selectedUser: User?
+    @ObservedObject var viewModel =  ConservationsViewModel()
+    
     var body: some View {
             VStack(alignment: .leading){
                 if let user = selectedUser {
@@ -26,7 +28,7 @@ struct ConservationView: View {
                
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
-                    ForEach((0 ... 20), id:\.self){ _ in
+                    ForEach(viewModel.recentMessages){ message in
                         if let user = selectedUser {
                             NavigationLink(
                                 destination: ChatView(user: user),
