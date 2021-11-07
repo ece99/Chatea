@@ -57,12 +57,19 @@ class ChatViewModel: ObservableObject{
         let currentUserRef = Firestore.firestore().collection("messages").document(currentUid).collection(chatPartnerId).document()
         let chatPartnerRef = Firestore.firestore().collection("messages").document(chatPartnerId).collection(currentUid)
         
+        let recentUserRef = Firestore.firestore().collection("messages").document(currentUid)
+            .collection("recent_messages").document(chatPartnerId)
+        let recentPartnerRef = Firestore.firestore().collection("messages").document(chatPartnerId).collection("recent_messages").document(currentUid)
+        
         let messageId = currentUserRef.documentID
         
         let data: [String: Any] = ["text": messageText, "fromId": currentUid, "told": chatPartnerId, "read": false, "timestamp" : Timestamp(date: Date())]
         
         currentUserRef.setData(data)
         chatPartnerRef.document(messageId).setData(data)
-        
+
+        recentUserRef.setData(data)
+        recentPartnerRef.setData(data)
+
     }
 }
