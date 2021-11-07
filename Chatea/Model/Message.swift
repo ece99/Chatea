@@ -17,8 +17,6 @@ struct Message: Identifiable, Decodable{
     let text: String
     let timestamp : Timestamp
     
-    /* let id = NSUUID().uuidString
-     let isFromCurrentUser: Bool
-     let messageText: String*/
+    var user: User?
     
 }

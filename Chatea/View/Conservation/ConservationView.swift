@@ -23,8 +23,7 @@ struct ConservationView: View {
                 NewMessageView(showChatView: $showChatView, user: $selectedUser)
 
             ScrollView{
-                //user cell
-                //chats
+               
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
                     ForEach((0 ... 20), id:\.self){ _ in
