@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ConservationCell: View {
+    let viewModel: MessageViewModel
     var body: some View {
         
         VStack{
@@ -22,7 +23,7 @@ struct ConservationCell: View {
                     Text("Ece Ayvaz")
                         .font(.system(size: 14, weight:.semibold))
                     
-                    Text("Some text messages")
+                    Text(viewModel.message.text)
                         .font(.system(size:15))
                 }.foregroundColor(.black)
                 Spacer()
@@ -30,11 +31,5 @@ struct ConservationCell: View {
             .padding(.horizontal)
             Divider()
         }
-    }
-}
-
-struct ConservationCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ConservationCell()
     }
 }

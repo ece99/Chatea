@@ -33,7 +33,7 @@ struct ConservationView: View {
                             NavigationLink(
                                 destination: ChatView(user: user),
                                 label: {
-                                    ConservationCell()
+                                    ConservationCell(viewModel:MessageViewModel(message: message))
                                 })
                             
                         }
