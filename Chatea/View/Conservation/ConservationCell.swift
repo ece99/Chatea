@@ -6,23 +6,27 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ConservationCell: View {
-    let viewModel: MessageViewModel
+    //let viewModel: MessageViewModel
+    @ObservedObject var viewModel : MessageViewModel
     var body: some View {
         
         VStack{
             HStack{
-                Image("foto")
+                KFImage(viewModel.chatPartnerProfileImageUrl)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 48, height: 48)
                     .clipShape(Circle())
                 
                 VStack(alignment: .leading){
-                    Text("Ece Ayvaz")
-                        .font(.system(size: 14, weight:.semibold))
-                    
+                    if let user = viewModel.user{
+                        Text(user.email)
+                            .font(.system(size: 14, weight:.semibold))
+                    }
+
                     Text(viewModel.message.text)
                         .font(.system(size:15))
                 }.foregroundColor(.black)
@@ -30,6 +34,8 @@ struct ConservationCell: View {
             }
             .padding(.horizontal)
             Divider()
+        }.onAppear{
+            viewModel.fetchUser()
         }
     }
 }

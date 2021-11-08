@@ -29,14 +29,12 @@ struct ConservationView: View {
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
                     ForEach(viewModel.recentMessages){ message in
-                        if let user = selectedUser {
-                            NavigationLink(
-                                destination: ChatView(user: user),
-                                label: {
-                                    ConservationCell(viewModel:MessageViewModel(message: message))
-                                })
+                           NavigationLink(
+                           
+                            destination: ChatView(user: MOCK_USER),
+                            label: {ConservationCell(viewModel:MessageViewModel(message: message))})
                             
-                        }
+                        
                        
                     }
                 }
