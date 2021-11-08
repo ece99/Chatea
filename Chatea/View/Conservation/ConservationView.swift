@@ -13,37 +13,31 @@ struct ConservationView: View {
     @ObservedObject var viewModel =  ConservationsViewModel()
     
     var body: some View {
-            VStack(alignment: .leading){
-                if let user = selectedUser {
-                    NavigationLink(
-                        destination: ChatView(user: user),
-                        isActive: $showChatView,
-                        label: {
-                        })
-                }
-
-                NewMessageView(showChatView: $showChatView, user: $selectedUser)
-
+        VStack(alignment: .leading){
+            if let user = selectedUser {
+                NavigationLink(
+                    destination: ChatView(user: user),
+                    isActive: $showChatView,
+                    label: {
+                    })
+            }
+            
+            NewMessageView(showChatView: $showChatView, user: $selectedUser)
+            
             ScrollView{
-               
+                
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
                     ForEach(viewModel.recentMessages){ message in
-                           NavigationLink(
-                           
-                            destination: ChatView(user: MOCK_USER),
-                            label: {ConservationCell(viewModel:MessageViewModel(message: message))})
-                            
-                        
-                       
+                        ConservationCell(viewModel: ConservationCellViewModel(message: message))
                     }
                 }
             }
-
+            
         }
     }
-            
-    }
+    
+}
 
 
 struct ConservationView_Previews: PreviewProvider {

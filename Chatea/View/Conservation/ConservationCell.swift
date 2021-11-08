@@ -10,32 +10,38 @@ import Kingfisher
 
 struct ConservationCell: View {
     //let viewModel: MessageViewModel
-    @ObservedObject var viewModel : MessageViewModel
+    @ObservedObject var viewModel : ConservationCellViewModel
     var body: some View {
-        
-        VStack{
-            HStack{
-                KFImage(viewModel.chatPartnerProfileImageUrl)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 48, height: 48)
-                    .clipShape(Circle())
-                
-                VStack(alignment: .leading){
-                    if let user = viewModel.user{
-                        Text(user.email)
-                            .font(.system(size: 14, weight:.semibold))
+        if let user = viewModel.message.user {
+            NavigationLink(
+                destination: ChatView(user: user),
+                label: {
+                    VStack{
+                        HStack{
+                            KFImage(viewModel.chatPartnerProfileImageUrl)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 48, height: 48)
+                                .clipShape(Circle())
+                            
+                            VStack(alignment: .leading){
+                                if let user = viewModel.message.user{
+                                    Text(user.email)
+                                        .font(.system(size: 14, weight:.semibold))
+                                }
+                                
+                                Text(viewModel.message.text)
+                                    .font(.system(size:15))
+                            }.foregroundColor(.black)
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        Divider()
                     }
-
-                    Text(viewModel.message.text)
-                        .font(.system(size:15))
-                }.foregroundColor(.black)
-                Spacer()
-            }
-            .padding(.horizontal)
-            Divider()
-        }.onAppear{
-            viewModel.fetchUser()
+                })
         }
+        /*.onAppear{
+         viewModel.fetchUser()
+         }*/
     }
 }
