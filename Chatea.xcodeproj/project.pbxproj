@@ -13,6 +13,7 @@
 		376071752738942B007ED01F /* ConservationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376071742738942B007ED01F /* ConservationsViewModel.swift */; };
 		3761F6FF272170EB00DD04BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761F6FE272170EB00DD04BB /* MainView.swift */; };
 		37638ED92739200500DC73B3 /* ConservationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37638ED82739200500DC73B3 /* ConservationCellViewModel.swift */; };
+		37638EDC273953F700DC73B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37638EDB273953F700DC73B3 /* LaunchScreen.storyboard */; };
 		3764A90827278ED20068A3E0 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A90727278ED20068A3E0 /* ChatBubble.swift */; };
 		3764A90B27278FBA0068A3E0 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A90A27278FBA0068A3E0 /* MessageView.swift */; };
 		3764A911272797520068A3E0 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A910272797520068A3E0 /* CustomInputView.swift */; };
@@ -45,6 +46,7 @@
 		376071742738942B007ED01F /* ConservationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationsViewModel.swift; sourceTree = "<group>"; };
 		3761F6FE272170EB00DD04BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		37638ED82739200500DC73B3 /* ConservationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationCellViewModel.swift; sourceTree = "<group>"; };
+		37638EDB273953F700DC73B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3764A90727278ED20068A3E0 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		3764A90A27278FBA0068A3E0 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		3764A910272797520068A3E0 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				378F607B27274B85001A3D0C /* Chats */,
 				3761F6FC272169D000DD04BB /* Main */,
 				37DC525E2720554D00423303 /* Authentication */,
+				37638EDB273953F700DC73B3 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DC52542720367F00423303 /* Preview Assets.xcassets in Resources */,
+				37638EDC273953F700DC73B3 /* LaunchScreen.storyboard in Resources */,
 				37DC52512720367F00423303 /* Assets.xcassets in Resources */,
 				3741E96C2727E9990023B84C /* GoogleService-Info.plist in Resources */,
 			);
