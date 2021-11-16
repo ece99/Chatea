@@ -14,7 +14,7 @@ class ConservationCellViewModel : ObservableObject {
     //let message : Message
     @Published var message: Message
     
-    init(message : Message){
+    init(_ message : Message){
         self.message = message
         fetchUser()
     }

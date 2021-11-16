@@ -12,6 +12,7 @@ struct ChatView: View {
     @State private var messageText = ""
     @ObservedObject var viewModel: ChatViewModel
     
+
     private let user: User
     
     init(user: User){
@@ -30,6 +31,7 @@ struct ChatView: View {
                     }
                 }
             }
+            
             CustomInputView(text: $messageText, action: sendMessage)
            
         }

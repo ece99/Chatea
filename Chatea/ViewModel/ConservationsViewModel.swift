@@ -18,7 +18,7 @@ class ConservationsViewModel : ObservableObject{
     func fetchRecentMessages(){
         guard let uid = AuthViewModel.shared.userSession?.uid else {return}
         
-        Firestore.firestore().collection("messages").document(uid).collection("recent_messages").order(by:"timestamp",descending:true).getDocuments{snapshot,_ in
+        Firestore.firestore().collection("messages").document(uid).collection("recent_messages").order(by:"timestamp",descending:false).addSnapshotListener{snapshot,_ in
             
             guard let documents = snapshot?.documents else {return}
             

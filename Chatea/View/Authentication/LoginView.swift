@@ -12,7 +12,7 @@ struct LoginView: View {
     @State private var password = ""
     //@ObservedObject var viewModel = AuthViewModel()
     @EnvironmentObject var viewModel: AuthViewModel
-
+    
     var body: some View {
         
         NavigationView {
@@ -28,7 +28,7 @@ struct LoginView: View {
                         TextField("Email",text: $email)
                         Divider()
                             .background(Color(.darkGray))
-   
+                        
                         SecureField("Password",text: $password)
                         Divider()
                             .background(Color(.darkGray))
@@ -60,14 +60,24 @@ struct LoginView: View {
                                 .font(.system(size: 14, weight: .semibold))
                                 .foregroundColor(.blue)
                         })
-                        
+                        /* NavigationLink(
+                         destination: RegistrationView(),
+                         label: {
+                         Text("Don't have an account?")
+                         .font(.system(size: 14))
+                         .foregroundColor(.blue)
+                         
+                         Text("Sign Up")
+                         .font(.system(size: 14, weight: .semibold))
+                         .foregroundColor(.blue)
+                         })*/
                     }
                 }
                 .padding(.leading)
             }
             .padding(.top, -56)
         }
-
+        
     }
 }
 
