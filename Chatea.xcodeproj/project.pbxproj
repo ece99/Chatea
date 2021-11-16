@@ -36,6 +36,7 @@
 		378F608827275F48001A3D0C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F608727275F48001A3D0C /* UserCell.swift */; };
 		378F608B27276AF4001A3D0C /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F608A27276AF4001A3D0C /* NewMessageView.swift */; };
 		37A95EDC27433A0F00780E50 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A95EDB27433A0F00780E50 /* ImagePicker.swift */; };
+		37A95EE02743571100780E50 /* UploadPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A95EDF2743571100780E50 /* UploadPhotoView.swift */; };
 		37DC524D2720367D00423303 /* ChateaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC524C2720367D00423303 /* ChateaApp.swift */; };
 		37DC524F2720367D00423303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC524E2720367D00423303 /* ContentView.swift */; };
 		37DC52512720367F00423303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DC52502720367F00423303 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		378F608727275F48001A3D0C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		378F608A27276AF4001A3D0C /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		37A95EDB27433A0F00780E50 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		37A95EDF2743571100780E50 /* UploadPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoView.swift; sourceTree = "<group>"; };
 		37DC52492720367D00423303 /* Chatea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DC524C2720367D00423303 /* ChateaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateaApp.swift; sourceTree = "<group>"; };
 		37DC524E2720367D00423303 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				37DC525F272055D800423303 /* LoginView.swift */,
 				376301E3273BA0C200DD21E4 /* RegistrationView.swift */,
+				37A95EDF2743571100780E50 /* UploadPhotoView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				378F608827275F48001A3D0C /* UserCell.swift in Sources */,
 				376301E4273BA0C200DD21E4 /* RegistrationView.swift in Sources */,
 				37DC5260272055D800423303 /* LoginView.swift in Sources */,
+				37A95EE02743571100780E50 /* UploadPhotoView.swift in Sources */,
 				378429152728FEC5009BA465 /* User.swift in Sources */,
 				376071752738942B007ED01F /* ConservationsViewModel.swift in Sources */,
 				3764A911272797520068A3E0 /* CustomInputView.swift in Sources */,
