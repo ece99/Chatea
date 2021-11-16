@@ -14,6 +14,8 @@ struct MainView: View {
             TabView{
                 ConservationView()
                     .tabItem { Image(systemName: "bubble.left") }
+                SettingsView()
+                    .tabItem { Image(systemName: "gear") }
             }
             .navigationTitle("Chats")
             .navigationBarItems(trailing:
