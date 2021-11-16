@@ -14,7 +14,7 @@ struct ConservationView: View {
     @ObservedObject var viewModel =  ConservationsViewModel()
     
     var body: some View {
-        VStack(alignment: .leading) {
+        ZStack(alignment: .bottomTrailing) {
             if let user = selectedUser {
                 NavigationLink(
                     destination: ChatView(user: user),
@@ -34,23 +34,25 @@ struct ConservationView: View {
                     }
                 }
             }
+            VStack{
+                Button(action: {
+                    showNewMessageView.toggle()
+                }, label: {
+                    Image(systemName: "square.and.pencil")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                        .padding()
+                })
+                .background(Color(.systemBlue))
+                .foregroundColor(.white)
+                .clipShape(Circle())
+                .padding()
+                .sheet(isPresented: $showNewMessageView, content: {
+                    NewMessageView(showChatView: $showChatView, user: $selectedUser)
+                })
+            }
             
-            Button(action: {
-                showNewMessageView.toggle()
-            }, label: {
-                Image(systemName: "square.and.pencil")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24)
-                    .padding()
-            })
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
-            .clipShape(Circle())
-            .padding()
-            .sheet(isPresented: $showNewMessageView, content: {
-                NewMessageView(showChatView: $showChatView, user: $selectedUser)
-            })
             
         }.onAppear{
             viewModel.fetchRecentMessages()

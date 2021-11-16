@@ -10,9 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
-    //@ObservedObject var viewModel = AuthViewModel()
-    @EnvironmentObject var viewModel: AuthViewModel
-    
+    @ObservedObject var viewModel = AuthViewModel()
     var body: some View {
         
         NavigationView {
@@ -35,6 +33,7 @@ struct LoginView: View {
                     }
                     .padding([.top, .horizontal], 32)
                     
+                    
                     Button(action: {
                         viewModel.login(withEmail: email, password: password)
                     }, label: {
@@ -48,30 +47,36 @@ struct LoginView: View {
                     })
                     
                     Spacer()
-                    HStack {
-                        Button(action: {
-                            viewModel.register(withEmail: email, password: password)
-                        }, label: {
-                            Text("Don't have an account?")
-                                .font(.system(size: 14))
-                                .foregroundColor(.blue)
+                    NavigationLink(
+                        destination: UploadPhotoView(),
+                        isActive: $viewModel.didAuthenticationUser,
+                        label: {
+                            HStack{
+                                Button(action: {
+                                    viewModel.register(withEmail: email, password: password)
+                                }, label: {
+                                    Text("Don't have an account?")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.blue)
+                                    
+                                    Text("Sign Up")
+                                        .font(.system(size: 14, weight: .semibold))
+                                        .foregroundColor(.blue)
+                                })
+                            }
                             
-                            Text("Sign Up")
-                                .font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(.blue)
                         })
-                        /* NavigationLink(
-                         destination: RegistrationView(),
-                         label: {
-                         Text("Don't have an account?")
-                         .font(.system(size: 14))
-                         .foregroundColor(.blue)
-                         
-                         Text("Sign Up")
-                         .font(.system(size: 14, weight: .semibold))
-                         .foregroundColor(.blue)
-                         })*/
-                    }
+                    /* NavigationLink(
+                     destination: RegistrationView(),
+                     label: {
+                     Text("Don't have an account?")
+                     .font(.system(size: 14))
+                     .foregroundColor(.blue)
+                     
+                     Text("Sign Up")
+                     .font(.system(size: 14, weight: .semibold))
+                     .foregroundColor(.blue)
+                     })*/
                 }
                 .padding(.leading)
             }
