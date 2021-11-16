@@ -35,6 +35,7 @@
 		378F60852727599A001A3D0C /* ConservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F60842727599A001A3D0C /* ConservationCell.swift */; };
 		378F608827275F48001A3D0C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F608727275F48001A3D0C /* UserCell.swift */; };
 		378F608B27276AF4001A3D0C /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F608A27276AF4001A3D0C /* NewMessageView.swift */; };
+		37A95EDC27433A0F00780E50 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A95EDB27433A0F00780E50 /* ImagePicker.swift */; };
 		37DC524D2720367D00423303 /* ChateaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC524C2720367D00423303 /* ChateaApp.swift */; };
 		37DC524F2720367D00423303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC524E2720367D00423303 /* ContentView.swift */; };
 		37DC52512720367F00423303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DC52502720367F00423303 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		378F60842727599A001A3D0C /* ConservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationCell.swift; sourceTree = "<group>"; };
 		378F608727275F48001A3D0C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		378F608A27276AF4001A3D0C /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
+		37A95EDB27433A0F00780E50 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		37DC52492720367D00423303 /* Chatea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DC524C2720367D00423303 /* ChateaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateaApp.swift; sourceTree = "<group>"; };
 		37DC524E2720367D00423303 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = Conservation;
 			sourceTree = "<group>";
 		};
+		37A95EDA274339F900780E50 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				37A95EDB27433A0F00780E50 /* ImagePicker.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		37DC52402720367D00423303 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 		37DC524B2720367D00423303 /* Chatea */ = {
 			isa = PBXGroup;
 			children = (
+				37A95EDA274339F900780E50 /* Others */,
 				3764A91527279B190068A3E0 /* ViewModel */,
 				3764A91427279B110068A3E0 /* Model */,
 				37DC525C2720544500423303 /* View */,
@@ -318,6 +329,7 @@
 				3764A91C27279B470068A3E0 /* Message.swift in Sources */,
 				378F60852727599A001A3D0C /* ConservationCell.swift in Sources */,
 				378F608227274BB2001A3D0C /* ChatView.swift in Sources */,
+				37A95EDC27433A0F00780E50 /* ImagePicker.swift in Sources */,
 				37DC524D2720367D00423303 /* ChateaApp.swift in Sources */,
 				376301E8273BA58B00DD21E4 /* SettingsView.swift in Sources */,
 			);

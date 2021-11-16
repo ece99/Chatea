@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ConservationView: View {
+    @State private var showNewMessageView = false
     @State private  var showChatView = false
     @State var selectedUser: User?
     @ObservedObject var viewModel =  ConservationsViewModel()
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             if let user = selectedUser {
                 NavigationLink(
                     destination: ChatView(user: user),
@@ -22,7 +23,7 @@ struct ConservationView: View {
                     })
             }
             
-            NewMessageView(showChatView: $showChatView, user: $selectedUser)
+            //NewMessageView(showChatView: $showChatView, user: $selectedUser)
             
             ScrollView{
                 
@@ -33,6 +34,23 @@ struct ConservationView: View {
                     }
                 }
             }
+            
+            Button(action: {
+                showNewMessageView.toggle()
+            }, label: {
+                Image(systemName: "square.and.pencil")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 24, height: 24)
+                    .padding()
+            })
+            .background(Color(.systemBlue))
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .padding()
+            .sheet(isPresented: $showNewMessageView, content: {
+                NewMessageView(showChatView: $showChatView, user: $selectedUser)
+            })
             
         }.onAppear{
             viewModel.fetchRecentMessages()
