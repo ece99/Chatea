@@ -29,11 +29,13 @@ struct ConservationView: View {
                 VStack(alignment: .leading){
                     HStack  {Spacer()}
                     ForEach(viewModel.recentMessages){ message in
-                        ConservationCell(viewModel: ConservationCellViewModel(message: message))
+                        ConservationCell(viewModel: ConservationCellViewModel(message))
                     }
                 }
             }
             
+        }.onAppear{
+            viewModel.fetchRecentMessages()
         }
     }
     
