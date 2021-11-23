@@ -12,6 +12,8 @@
 		3741E9792727F2DC0023B84C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E9782727F2DC0023B84C /* AuthViewModel.swift */; };
 		376071752738942B007ED01F /* ConservationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376071742738942B007ED01F /* ConservationsViewModel.swift */; };
 		3761F6FF272170EB00DD04BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761F6FE272170EB00DD04BB /* MainView.swift */; };
+		3762F59A27460887003DD196 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762F59927460887003DD196 /* AuthServiceProtocol.swift */; };
+		3762F59E274608BA003DD196 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762F59D274608BA003DD196 /* AuthService.swift */; };
 		376301E4273BA0C200DD21E4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376301E3273BA0C200DD21E4 /* RegistrationView.swift */; };
 		376301E8273BA58B00DD21E4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376301E7273BA58B00DD21E4 /* SettingsView.swift */; };
 		376301EC273BADC300DD21E4 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376301EB273BADC300DD21E4 /* SettingsHeaderView.swift */; };
@@ -22,6 +24,10 @@
 		3764A911272797520068A3E0 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A910272797520068A3E0 /* CustomInputView.swift */; };
 		3764A91C27279B470068A3E0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A91B27279B470068A3E0 /* Message.swift */; };
 		3764A91F27279D090068A3E0 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764A91E27279D090068A3E0 /* ChatViewModel.swift */; };
+		378138EF274452B7001918DE /* ChateaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378138EE274452B7001918DE /* ChateaTests.swift */; };
+		378398FB2745097C00FCF3C5 /* testUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378398FA2745097C00FCF3C5 /* testUser.swift */; };
+		3783990B27451B1800FCF3C5 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783990A27451B1800FCF3C5 /* MockAuthService.swift */; };
+		378399112745204400FCF3C5 /* AuthViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378399102745204400FCF3C5 /* AuthViewModelTest.swift */; };
 		3784290A2728FE84009BA465 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 378429092728FE84009BA465 /* FirebaseFunctions */; };
 		3784290C2728FE84009BA465 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3784290B2728FE84009BA465 /* FirebaseFirestoreSwift-Beta */; };
 		3784290E2728FE84009BA465 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3784290D2728FE84009BA465 /* FirebaseStorage */; };
@@ -44,12 +50,24 @@
 		37DC5260272055D800423303 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC525F272055D800423303 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		378138F1274452B7001918DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37DC52412720367D00423303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37DC52482720367D00423303;
+			remoteInfo = Chatea;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		37100E64272FC9EC00CE5EE8 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		3741E96B2727E9990023B84C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3741E9782727F2DC0023B84C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		376071742738942B007ED01F /* ConservationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationsViewModel.swift; sourceTree = "<group>"; };
 		3761F6FE272170EB00DD04BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3762F59927460887003DD196 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		3762F59D274608BA003DD196 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		376301E3273BA0C200DD21E4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		376301E7273BA58B00DD21E4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		376301EB273BADC300DD21E4 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
@@ -60,6 +78,12 @@
 		3764A910272797520068A3E0 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
 		3764A91B27279B470068A3E0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		3764A91E27279D090068A3E0 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		378138EC274452B7001918DE /* ChateaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChateaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		378138EE274452B7001918DE /* ChateaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateaTests.swift; sourceTree = "<group>"; };
+		378138F0274452B7001918DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		378398FA2745097C00FCF3C5 /* testUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUser.swift; sourceTree = "<group>"; };
+		3783990A27451B1800FCF3C5 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		378399102745204400FCF3C5 /* AuthViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTest.swift; sourceTree = "<group>"; };
 		378429142728FEC5009BA465 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3784291B27290A42009BA465 /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		378F607D27274BA6001A3D0C /* ConservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationView.swift; sourceTree = "<group>"; };
@@ -79,6 +103,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		378138E9274452B7001918DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37DC52462720367D00423303 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,6 +165,34 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		378138ED274452B7001918DE /* ChateaTests */ = {
+			isa = PBXGroup;
+			children = (
+				3783990927451B0600FCF3C5 /* Mock */,
+				378138EE274452B7001918DE /* ChateaTests.swift */,
+				378138F0274452B7001918DE /* Info.plist */,
+				378398FA2745097C00FCF3C5 /* testUser.swift */,
+				378399102745204400FCF3C5 /* AuthViewModelTest.swift */,
+			);
+			path = ChateaTests;
+			sourceTree = "<group>";
+		};
+		3783990227451A8400FCF3C5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3762F59927460887003DD196 /* AuthServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3783990927451B0600FCF3C5 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3783990A27451B1800FCF3C5 /* MockAuthService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		378F607B27274B85001A3D0C /* Chats */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				37A95EDB27433A0F00780E50 /* ImagePicker.swift */,
+				3762F59D274608BA003DD196 /* AuthService.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -168,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				37DC524B2720367D00423303 /* Chatea */,
+				378138ED274452B7001918DE /* ChateaTests */,
 				37DC524A2720367D00423303 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -176,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				37DC52492720367D00423303 /* Chatea.app */,
+				378138EC274452B7001918DE /* ChateaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +245,7 @@
 		37DC524B2720367D00423303 /* Chatea */ = {
 			isa = PBXGroup;
 			children = (
+				3783990227451A8400FCF3C5 /* Protocol */,
 				37A95EDA274339F900780E50 /* Others */,
 				3764A91527279B190068A3E0 /* ViewModel */,
 				3764A91427279B110068A3E0 /* Model */,
@@ -231,6 +294,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		378138EB274452B7001918DE /* ChateaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 378138F5274452B7001918DE /* Build configuration list for PBXNativeTarget "ChateaTests" */;
+			buildPhases = (
+				378138E8274452B7001918DE /* Sources */,
+				378138E9274452B7001918DE /* Frameworks */,
+				378138EA274452B7001918DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				378138F2274452B7001918DE /* PBXTargetDependency */,
+			);
+			name = ChateaTests;
+			productName = ChateaTests;
+			productReference = 378138EC274452B7001918DE /* ChateaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		37DC52482720367D00423303 /* Chatea */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37DC52582720367F00423303 /* Build configuration list for PBXNativeTarget "Chatea" */;
@@ -265,6 +346,10 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					378138EB274452B7001918DE = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 37DC52482720367D00423303;
+					};
 					37DC52482720367D00423303 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -288,11 +373,19 @@
 			projectRoot = "";
 			targets = (
 				37DC52482720367D00423303 /* Chatea */,
+				378138EB274452B7001918DE /* ChateaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		378138EA274452B7001918DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37DC52472720367D00423303 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,6 +400,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		378138E8274452B7001918DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378399112745204400FCF3C5 /* AuthViewModelTest.swift in Sources */,
+				378398FB2745097C00FCF3C5 /* testUser.swift in Sources */,
+				378138EF274452B7001918DE /* ChateaTests.swift in Sources */,
+				3783990B27451B1800FCF3C5 /* MockAuthService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37DC52452720367D00423303 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +420,7 @@
 				3764A90827278ED20068A3E0 /* ChatBubble.swift in Sources */,
 				378F608827275F48001A3D0C /* UserCell.swift in Sources */,
 				376301E4273BA0C200DD21E4 /* RegistrationView.swift in Sources */,
+				3762F59A27460887003DD196 /* AuthServiceProtocol.swift in Sources */,
 				37DC5260272055D800423303 /* LoginView.swift in Sources */,
 				37A95EE02743571100780E50 /* UploadPhotoView.swift in Sources */,
 				378429152728FEC5009BA465 /* User.swift in Sources */,
@@ -331,6 +436,7 @@
 				3764A91F27279D090068A3E0 /* ChatViewModel.swift in Sources */,
 				378F607E27274BA6001A3D0C /* ConservationView.swift in Sources */,
 				3764A91C27279B470068A3E0 /* Message.swift in Sources */,
+				3762F59E274608BA003DD196 /* AuthService.swift in Sources */,
 				378F60852727599A001A3D0C /* ConservationCell.swift in Sources */,
 				378F608227274BB2001A3D0C /* ChatView.swift in Sources */,
 				37A95EDC27433A0F00780E50 /* ImagePicker.swift in Sources */,
@@ -341,7 +447,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		378138F2274452B7001918DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37DC52482720367D00423303 /* Chatea */;
+			targetProxy = 378138F1274452B7001918DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		378138F3274452B7001918DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L7TM2389A7;
+				INFOPLIST_FILE = ChateaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eceayvaz.ChateaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chatea.app/Chatea";
+			};
+			name = Debug;
+		};
+		378138F4274452B7001918DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L7TM2389A7;
+				INFOPLIST_FILE = ChateaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eceayvaz.ChateaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chatea.app/Chatea";
+			};
+			name = Release;
+		};
 		37DC52562720367F00423303 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -505,6 +659,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		378138F5274452B7001918DE /* Build configuration list for PBXNativeTarget "ChateaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378138F3274452B7001918DE /* Debug */,
+				378138F4274452B7001918DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37DC52442720367D00423303 /* Build configuration list for PBXProject "Chatea" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
