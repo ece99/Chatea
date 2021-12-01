@@ -11,10 +11,9 @@ struct MessageViewModel {
     
     let message: Message
     
-    /*init(message  : Message){
+    init(message  : Message){
         self.message = message
-        fetchUser()
-    }*/
+    }
     
     var currentUid: String {
         return AuthViewModel.shared.userSession?.uid ?? ""

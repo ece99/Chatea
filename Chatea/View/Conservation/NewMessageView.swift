@@ -6,12 +6,29 @@
 //
 
 import SwiftUI
+import Combine
 
+final class Inspection<V>: InspectionEmissary {
+    let notice = PassthroughSubject<UInt, Never>()
+    var callbacks = [UInt: (V) -> Void]()
+    
+    func visit(_ view: V, _ line: UInt) {
+        if let callback = callbacks.removeValue(forKey: line) {
+            callback(view)
+        }
+    }
+}
 struct NewMessageView: View {
     @Binding var showChatView:Bool
-    @Environment(\.presentationMode) var mode
-    @ObservedObject var viewModel = NewMessageViewModel()
     @Binding var user: User?
+    @ObservedObject var viewModel = NewMessageViewModel()
+    @Environment(\.presentationMode) var mode
+    
+    let publisher = PassthroughSubject<Bool, Never>()
+    let inspection = Inspection<Self>()
+    var didAppear: ((Self) -> Void)?
+    
+    
     var body: some View {
         
         ScrollView {
@@ -26,24 +43,26 @@ struct NewMessageView: View {
                     })
                 }
             }
-        }
+        }.onReceive(publisher) { self.showChatView = $0 }
+        .onReceive(inspection.notice) { self.inspection.visit(self, $0) }
+        .onAppear { self.didAppear?(self) }
         
-          /* HStack{
-                ForEach(viewModel.users){ user in
-                //ForEach((0 ... 5), id:\.self){ _ in
-                    Button(action:{
-                        showChatView.toggle()
-                        self.user = user
-                    }, label: {
-                        UserCell(user: user)
-                    })
-                    
-
-                }
-            }*/
+        /* HStack{
+         ForEach(viewModel.users){ user in
+         //ForEach((0 ... 5), id:\.self){ _ in
+         Button(action:{
+         showChatView.toggle()
+         self.user = user
+         }, label: {
+         UserCell(user: user)
+         })
+         
+         
+         }
+         }*/
         
     }
-    }
+}
 
 
 

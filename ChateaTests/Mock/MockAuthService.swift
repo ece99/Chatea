@@ -8,7 +8,8 @@
 import Foundation
 @testable import Chatea
 
-final class MockAuthService : AuthServiceProtocol{
+final class MockAuthService {
+   
     
     var user = User(id: "12345", email: "@gmail", password: "12345", profileImageUrl: "www.pinterest.com")
     

@@ -11,6 +11,10 @@ import Kingfisher
 struct ConservationCell: View {
     //let viewModel: MessageViewModel
     @ObservedObject var viewModel : ConservationCellViewModel
+    
+    init(viewModel: ConservationCellViewModel) {
+        self.viewModel = viewModel
+    }
     var body: some View {
         if let user = viewModel.message.user {
             NavigationLink(
@@ -39,7 +43,7 @@ struct ConservationCell: View {
                         Divider()
                     }
                 })
-        }
+        } else { Text("User not found in Conversation Cell")}
         /*.onAppear{
          viewModel.fetchUser()
          }*/

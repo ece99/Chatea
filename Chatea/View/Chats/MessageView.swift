@@ -12,11 +12,15 @@ struct MessageView: View {
     //var isFromCurrentUser: Bool
     //var messageText: String
     let viewModel : MessageViewModel
+    
+    init(viewModel: MessageViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         HStack {
             if viewModel.isFromCurrentUser {
                 Spacer()
-                
                 Text(viewModel.message.text)
                     .padding(12)
                     .background(Color.blue)

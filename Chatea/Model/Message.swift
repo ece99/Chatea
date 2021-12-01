@@ -19,4 +19,20 @@ struct Message: Identifiable, Decodable{
     
     var user: User?
     
+    
+    /*  init(id:String = "" , fromId:String = "", told:String =  "",read: Bool = false, text:String = "" ,timestamp: Timestamp.init(seconds: Int64(sd), nanoseconds: Int32(nd)) , user: User = MOCK_USER){
+     
+     self.id = id
+     self.fromId = fromId
+     self.told = told
+     self.read = read
+     self.text = text
+     self.timestamp = timestamp
+     self.user = user
+     
+     }*/
+    
+    
 }
+
+var MOCK_MESSAGE = Message(id: "12345", fromId:"123" , told: "321", read: true, text: "Heyyo",timestamp: Timestamp(date: Date()), user: MOCK_USER)

@@ -75,6 +75,8 @@ class ChatViewModel: ObservableObject{
             recentUserRef.setData(data)
             recentPartnerRef.setData(data)
             
+            print(data)
+            
         } else{
             print("Wrong")
         }

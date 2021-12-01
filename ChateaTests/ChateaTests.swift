@@ -6,6 +6,11 @@
 //
 
 import XCTest
+import Kingfisher
+import ViewInspector
 
+
+@testable import Chatea
 class ChateaTests: XCTestCase {
+
 }

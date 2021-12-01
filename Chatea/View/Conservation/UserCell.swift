@@ -10,10 +10,14 @@ import Kingfisher
 
 struct UserCell: View {
     let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
     var body: some View {
         
         VStack{
-           //Image("foto")
+            //Image("foto")
             KFImage(URL(string: user.profileImageUrl))
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -22,7 +26,7 @@ struct UserCell: View {
             
             Text(user.email)
                 .font(.system(size: 12))
-
+            
         }
     }
 }

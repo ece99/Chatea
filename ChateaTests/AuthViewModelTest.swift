@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import Chatea
 
 class AuthViewModelTest: XCTestCase {
@@ -16,7 +17,7 @@ class AuthViewModelTest: XCTestCase {
     override func setUp() {
         
         mockAuthService = MockAuthService()
-        viewModel = .init(authService: mockAuthService!)
+        //viewModel = .init(authService: mockAuthService!)
     }
 
 }

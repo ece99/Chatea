@@ -6,12 +6,38 @@
 //
 
 import SwiftUI
+import Combine
+
+
+/*public protocol InspectionEmissary: AnyObject {
+    
+    associatedtype V
+    var notice: PassthroughSubject<UInt, Never> { get }
+    var callbacks: [UInt: (V) -> Void] { get set }
+}*/
+
+/*final class Inspection<V> {
+    let notice = PassthroughSubject<UInt, Never>()
+    var callbacks = [UInt: (V) -> Void]()
+    
+    func visit(_ view: V, _ line: UInt) {
+        if let callback = callbacks.removeValue(forKey: line) {
+            callback(view)
+        }
+    }
+}*/
+
 
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     //@ObservedObject var viewModel = AuthViewModel()
     @EnvironmentObject var viewModel: AuthViewModel
+    //let publisher = PassthroughSubject<String, Never>()
+    //let inspection = Inspection<Self>()
+    
+    internal var didAppear: ((Self) -> Void)?
+    
     var body: some View {
         
         NavigationView {
@@ -83,6 +109,9 @@ struct LoginView: View {
             }
             .padding(.top, -56)
         }
+        .onAppear { self.didAppear?(self) }
+        //.onReceive(publisher) { self.email = $0}
+        //.onReceive(inspection.notice) { self.inspection.visit(self, $0) }
         
     }
 }

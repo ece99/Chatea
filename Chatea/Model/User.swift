@@ -14,7 +14,16 @@ struct User : Identifiable, Decodable{
     let password: String
     let profileImageUrl: String
     
+    init(id:String = "" , email:String = "", password:String =  "",profileImageUrl: String = ""){
+        
+        self.id = id
+        self.email = email
+        self.password = password
+        self.profileImageUrl = profileImageUrl
+        
+    }
     
 }
+
 
 let MOCK_USER = User(id:"1234567890",email: "ege@gmail.com", password: "123456789",profileImageUrl: "www.pinterest.com")
